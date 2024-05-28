@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.group:hover .drop{
+  animation: zoneup 0.5s ease-in-out forwards;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* .drop {
+  
+  transition:   ease-in-out 0s normal zoneup; 
+} */
+.body-bg{
+  width: 100%;
+  min-height: 50vh;
+  background-color: #0e1d34;
+  background-image: url('https://bootstrapmade.com/demo/templates/Logis/assets/img/hero-bg.png');
+  background-position: center;
+  background-size: cover;
+}
+.spancont::after{
+  content: "";
+  width: 30px;
+  height: 3px;
+  background: #0d42ff;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.service::after{
+  content: "";
+  width: 30px;
+  height: 3px;
+  background: #0d42ff;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.storageimg img:hover{
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.deepdrop:hover .deepdown{
+  display: block;
+  animation: fadeside 0.5s ease-in-out forwards;
+}
+.deepdrop:hover > a{
+  color: #0d42ff;
+}
+.action-div{
+  position: relative;
+  /* background-image: url("https://bootstrapmade.com/demo/templates/Logis/assets/img/cta-bg.jpg"); */
+  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url("https://bootstrapmade.com/demo/templates/Logis/assets/img/cta-bg.jpg") center center;
+  ;
+  background-position: center;
+  background-size: cover;
+  
+}
+.pricing-div{
+  box-shadow: 0 3px 20px -2px rgba(108, 117, 125, 0.15);
+}
+.deepdrop:hover .IoIosArrowDown {
+  color: #0d42ff; 
+}
+.call-but:hover{
+  background-color:#0d42ff ;
+  border:1px solid #0d42ff ;
+  transition: 0.5s;
+}
+.testimonies-bg{
+  background-image: url("https://bootstrapmade.com/demo/templates/Logis/assets/img/testimonials-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.testimonies-bg::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(14, 29, 52, 0.7);
+}
+.img-test{
+  border-radius: 50%;
+  width: 100px;
+  margin: 0 auto;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+}
+.quote{
+  padding: 0px 20px;
+}
+.chevron{
+  transform: rotate(-180deg);
+  transition: transform 0.5s ease-in-out;
+}
+.chevron2{
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+.accordion{
+  transform: translateY(20px);
+  opacity: 3;
+  min-height: 70px;
+  padding-bottom: 25px;
+  transition: min-height 0.5s ease-in-out, opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+.accordion2{
+  height: 0px;
+  opacity: 0;
+  padding-bottom: 0px;
+  transform: translateY(0px);
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+@keyframes zoneup {
+  0%{
+    transform: translatey(0px);
+    opacity: 0;
+  }
+  100%{
+    transform: translatey(-20px);
+    opacity: 1;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes fadeside {
+  0%{
+    transform: translatex(0px);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    transform: translatex(20px);
+    opacity: 1;
   }
 }
